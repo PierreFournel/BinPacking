@@ -7,21 +7,21 @@ public class Pack {
     private double capacity;
     private double current_size;
 
-    public  Pack(){
+    public  Pack(double capacity){
         items = new ArrayList();
-        capacity = 1;
+        this.capacity = capacity;
         current_size = 0;
     }
 
+    public boolean canAddItem(Item item){
+        if(capacity-current_size>item.getSize())
+            return true;
+        return false;
+    }
 
-
-    public void addItem(Item item) throws PackException {
-        if(capacity-current_size>item.getSize()) {
+    public void addItem(Item item) {
             items.add(item);
             current_size+= item.getSize();
-            return;
-        }
-        throw new PackException("Impossible d'ajouter l'item au pack.");
     }
 
     public double getAvailibity(){

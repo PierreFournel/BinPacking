@@ -10,8 +10,8 @@ public class Main
             items.add(new Item());
         }
 
-        NextFit nextFit = new NextFit();
-        nextFit.pack(items,10);
+        NextFit nextFit = new NextFit(items,10);
+        nextFit.compute();
 
     }
 }
