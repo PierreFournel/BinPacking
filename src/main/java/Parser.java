@@ -18,8 +18,9 @@ public class Parser
       //  System.out.println(file);
 
       //  FileReader fileReader = new FileReader(file);
-
+        System.out.println("exemples/"+ fileName);
         InputStream inputStream = getClass().getResourceAsStream("exemples/"+ fileName);
+        System.out.println("ok");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
        // BufferedReader bufferedReader = new BufferedReader(fileReader);
