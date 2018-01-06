@@ -4,14 +4,14 @@ import java.util.List;
 public abstract class AlgorithmBinPacking {
 
     protected List<Item> items;
-    protected  List<Pack> packs;
+    protected List<Pack> packs;
     protected int pack_size;
     protected int nb_packs_used;
     protected double time;
 
-    public AlgorithmBinPacking(List<Item> items,int pack_size){
-        this.items=items;
-        this.pack_size=pack_size;
+    public AlgorithmBinPacking(List<Item> items, int pack_size) {
+        this.items = items;
+        this.pack_size = pack_size;
         packs = new ArrayList<Pack>();
         packs.add(new Pack(pack_size));
         nb_packs_used = 1;
@@ -19,8 +19,6 @@ public abstract class AlgorithmBinPacking {
     }
 
     public abstract void compute() throws PackException;
-
-
 
 
     public List<Item> getItems() {
@@ -46,5 +44,31 @@ public abstract class AlgorithmBinPacking {
 
     public void setTime(double time) {
         this.time = time;
+    }
+
+
+    @Override
+    public String toString() {
+        System.out.println(getClass());
+        System.out.println("------------------------------------------------------AFFICHAGE CONTENU PACKS---------------------------------------------------------------------------");
+        System.out.println(items.size() + " items");
+        System.out.println(nb_packs_used + " packs used \n");
+
+
+        for(int i =0; i<packs.size();i++){
+
+            Pack pack = packs.get(i);
+            System.out.println("\n\nPack "+i+" : Occupé par "+ pack.getItems().size() +" items et de capacité occupée " + pack.getCurrent_size());
+            System.out.print("[ ");
+            for(Item item : pack.getItems()){
+                System.out.print(item.getSize() +", ");
+
+            }
+            System.out.print(" ]");
+            System.out.println();
+            System.out.println("Espace disponible dans le pack "+i+" : " +pack.getAvailibity());
+        }
+        System.out.println("------------------------------------------------------FIN-----------------------------------------------------------------------------------------------");
+        return "";
     }
 }
