@@ -71,7 +71,7 @@ public abstract class AlgorithmBinPacking {
     public String toString() {
         System.out.println(items.size() + " items");
         System.out.println(nb_packs_used + " packs used \n");
-        System.out.println(time + "ms to compute the aglorithm");
+        System.out.println(time + " ms to compute the aglorithm");
         System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
 
 
