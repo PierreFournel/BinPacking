@@ -15,6 +15,7 @@ public class Main
         filesName.add("exemple100.txt");
         filesName.add("exemple500.txt");
         filesName.add("exemple1000.txt");
+        filesName.add("monexemple.txt");
 
         for(String fileName : filesName){
             System.out.println(fileName.toUpperCase());
