@@ -53,6 +53,7 @@ public abstract class AlgorithmBinPacking {
         System.out.println("------------------------------------------------------AFFICHAGE CONTENU PACKS---------------------------------------------------------------------------");
         System.out.println(items.size() + " items");
         System.out.println(nb_packs_used + " packs used \n");
+        System.out.println(time + "ms to compute the aglorithm");
 
 
         for(int i =0; i<packs.size();i++){

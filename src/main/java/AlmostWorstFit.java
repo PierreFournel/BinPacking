@@ -7,6 +7,9 @@ public class AlmostWorstFit extends AlgorithmBinPacking {
     }
 
     public void compute() throws PackException {
+
+        long debut = System.nanoTime();
+
         int almost_worst_index = 0;
         int worst_index = 0;
         boolean hasAlmostWorst;
@@ -34,5 +37,6 @@ public class AlmostWorstFit extends AlgorithmBinPacking {
                 packs.get(almost_worst_index).addItem(item);
             }
         }
+        time = (System.nanoTime() - debut)/1000000.0;
     }
 }

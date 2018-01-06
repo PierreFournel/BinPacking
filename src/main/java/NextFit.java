@@ -12,11 +12,7 @@ public class NextFit extends AlgorithmBinPacking{
 
     public void compute() throws PackException {
 
-
-
-
         long debut = System.nanoTime();
-
 
         for(int i=0; i<items.size();i++){
             Item item = items.get(i);
@@ -31,7 +27,6 @@ public class NextFit extends AlgorithmBinPacking{
         }
 
         time = (System.nanoTime() - debut)/1000000.0;
-       // tostring(items,packs,pack_size,packPosition);
     }
 
 

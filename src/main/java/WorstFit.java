@@ -8,6 +8,9 @@ public class WorstFit extends AlgorithmBinPacking {
     }
 
     public void compute() throws PackException {
+
+        long debut = System.nanoTime();
+
         int worst_index = 0;
         boolean hasWorst;
         for (Item item : items) {
@@ -31,5 +34,6 @@ public class WorstFit extends AlgorithmBinPacking {
                 packs.get(worst_index).addItem(item);
             }
         }
+        time = (System.nanoTime() - debut)/1000000.0;
     }
 }
