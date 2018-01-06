@@ -7,7 +7,6 @@ public class Item {
     }
 
     public Item(double size) throws ItemException {
-        checkSize(size);
         this.size = size;
     }
 
@@ -21,8 +20,7 @@ public class Item {
         return size;
     }
 
-    public void setSize(double size) throws ItemException {
-        checkSize(size);
+    public void setSize(double size)  {
         this.size = size;
     }
 }

@@ -11,17 +11,24 @@ public class Main
             items.add(new Item());
         }
 */
-        Parser parser = new Parser("exemple100.txt");
+        List<String> filesName = new ArrayList<String>();
+        filesName.add("exemple100.txt");
+        filesName.add("exemple500.txt");
+        filesName.add("exemple1000.txt");
 
-        List<Item> items = new ArrayList();
-        int pack_size;
+        for(String fileName : filesName){
+            System.out.println(fileName.toUpperCase());
+            Parser parser = new Parser(fileName);
 
-        items = parser.getItems();
-        pack_size = parser.getPack_size();
+            List<Item> items = new ArrayList();
+            int pack_size;
 
-        NextFit nextFit = new NextFit(items,pack_size);
-        nextFit.compute();
-        nextFit.toString();
+            items = parser.getItems();
+            pack_size = parser.getPack_size();
+
+            NextFit nextFit = new NextFit(items, pack_size);
+            nextFit.compute();
+            nextFit.toString();
 /*
         FirstFit firstFit = new FirstFit(items,1);
         firstFit.compute();
@@ -39,7 +46,7 @@ public class Main
         worstFit.compute();
         worstFit.toString();
 */
-
+        }
 
     }
 }

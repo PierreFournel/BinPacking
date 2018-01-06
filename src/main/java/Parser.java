@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -14,13 +12,17 @@ public class Parser
     {
         items = new ArrayList();
 
-        ClassLoader classLoader = getClass().getClassLoader();
+    //    ClassLoader classLoader = getClass().getClassLoader();
 
-        File file = new File(classLoader.getResource("exemples/" + fileName).getFile());
-        System.out.println(file);
-        FileReader fileReader = new FileReader(file);
+     //   File file = new File(classLoader.getResource("exemples/" + fileName).getFile());
+      //  System.out.println(file);
 
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
+      //  FileReader fileReader = new FileReader(file);
+
+        InputStream inputStream = getClass().getResourceAsStream("exemples/"+ fileName);
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+       // BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         String line;
 
@@ -55,7 +57,7 @@ public class Parser
         }
 
         bufferedReader.close();
-        fileReader.close();
+        inputStream.close();
     }
 
     public int getPack_size()
