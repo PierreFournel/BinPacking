@@ -7,6 +7,10 @@ public class WorstFit extends AlgorithmBinPacking {
         super(items, pack_size);
     }
 
+    public WorstFit(){
+        super();
+    }
+
     public void compute() throws PackException {
 
         long debut = System.nanoTime();

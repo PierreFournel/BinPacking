@@ -6,6 +6,10 @@ public class AlmostWorstFit extends AlgorithmBinPacking {
         super(items, pack_size);
     }
 
+    public AlmostWorstFit(){
+        super();
+    }
+
     public void compute() throws PackException {
 
         long debut = System.nanoTime();

@@ -7,6 +7,10 @@ public class FirstFit extends AlgorithmBinPacking {
         super(items, max_packs);
     }
 
+    public FirstFit(){
+        super();
+    }
+
     @Override
     public void compute()
     {

@@ -6,6 +6,10 @@ public class BestFit extends  AlgorithmBinPacking{
         super(items, pack_size);
     }
 
+    public BestFit(){
+        super();
+    }
+
     public void compute() throws PackException {
 
         long debut = System.nanoTime();
