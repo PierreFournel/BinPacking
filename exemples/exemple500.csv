@@ -1,0 +1,34 @@
+
+Nom de l'exemple : exemple100
+
+Nombre items : 100
+Capacite maximale d'un pack : 100
+Taille moyenne d'un item : 16.41
+
+Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack
+NextFit;21;0.248889;78.14285714285714
+FirstFit;17;0.294222;96.52941176470588
+BestFit;17;0.143111;96.52941176470588
+AlmostWorstFit;17;0.137334;96.52941176470588
+WorstFit;18;0.153333;91.16666666666667
+
+
+----------------------------------------------------------------------
+
+
+Nom de l'exemple : exemple500
+
+Nombre items : 500
+Capacite maximale d'un pack : 100
+Taille moyenne d'un item : 18.372
+
+Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack
+NextFit;114;0.222223;80.57894736842105
+FirstFit;94;2.30756;97.72340425531915
+BestFit;94;1.342225;97.72340425531915
+AlmostWorstFit;95;1.19378;96.69473684210526
+WorstFit;101;2.143115;90.95049504950495
+
+
+----------------------------------------------------------------------
+
