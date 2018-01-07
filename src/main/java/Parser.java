@@ -1,26 +1,19 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class Parser {
     private int pack_size;
     private List<Item> items;
 
     public Parser(String fileName) throws Exception {
+
         items = new ArrayList();
 
-        //    ClassLoader classLoader = getClass().getClassLoader();
 
-        //   File file = new File(classLoader.getResource("exemples/" + fileName).getFile());
-        //  System.out.println(file);
+        FileReader fileReader = new FileReader(System.getProperties().get("user.dir") + "/" + fileName);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-        //  FileReader fileReader = new FileReader(file);
-
-        InputStream inputStream = getClass().getResourceAsStream("exemples/" + fileName);
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-
-        // BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         String line;
 
@@ -49,7 +42,8 @@ public class Parser {
         }
 
         bufferedReader.close();
-        inputStream.close();
+       // inputStream.close();
+        fileReader.close();
     }
 
     public int getPack_size() {

@@ -13,10 +13,11 @@ public class Algo {
         Display display = new Display();
 
         List<String> filesName = new ArrayList<String>();
-        filesName.add("exemple100.txt");
-        filesName.add("exemple500.txt");
-        filesName.add("exemple1000.txt");
-        filesName.add("monexemple.txt");
+
+        filesName.add("exemples/exemple100.txt");
+        filesName.add("exemples/exemple500.txt");
+        filesName.add("exemples/exemple1000.txt");
+        filesName.add("exemples/monexemple.txt");
 
         List<AlgorithmBinPacking> algos = new ArrayList<AlgorithmBinPacking>();
         algos.add(new NextFit());
