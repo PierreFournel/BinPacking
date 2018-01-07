@@ -6,11 +6,11 @@ Capacite maximale d'un pack : 100
 Taille moyenne d'un item : 16.41
 
 Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack
-NextFit;21;0.248889;78.14285714285714
-FirstFit;17;0.294222;96.52941176470588
-BestFit;17;0.143111;96.52941176470588
-AlmostWorstFit;17;0.137334;96.52941176470588
-WorstFit;18;0.153333;91.16666666666667
+NextFit;21;0.109432;78.14285714285714
+FirstFit;17;0.397037;96.52941176470588
+BestFit;17;0.229136;96.52941176470588
+AlmostWorstFit;17;0.216889;96.52941176470588
+WorstFit;18;0.259555;91.16666666666667
 
 
 ----------------------------------------------------------------------
@@ -23,11 +23,11 @@ Capacite maximale d'un pack : 100
 Taille moyenne d'un item : 18.372
 
 Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack
-NextFit;114;0.222223;80.57894736842105
-FirstFit;94;2.30756;97.72340425531915
-BestFit;94;1.342225;97.72340425531915
-AlmostWorstFit;95;1.19378;96.69473684210526
-WorstFit;101;2.143115;90.95049504950495
+NextFit;114;1.398913;80.57894736842105
+FirstFit;94;4.231505;97.72340425531915
+BestFit;94;1.807011;97.72340425531915
+AlmostWorstFit;95;1.790419;96.69473684210526
+WorstFit;101;2.738567;90.95049504950495
 
 
 ----------------------------------------------------------------------
@@ -40,11 +40,11 @@ Capacite maximale d'un pack : 100
 Taille moyenne d'un item : 19.38
 
 Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack
-NextFit;238;0.169334;81.42857142857143
-FirstFit;197;3.880006;98.3756345177665
-BestFit;197;3.303117;98.3756345177665
-AlmostWorstFit;199;3.702228;97.38693467336684
-WorstFit;208;6.191566;93.17307692307692
+NextFit;238;0.244938;81.42857142857143
+FirstFit;197;7.486021;98.3756345177665
+BestFit;197;9.646613;98.3756345177665
+AlmostWorstFit;199;5.551405;97.38693467336684
+WorstFit;208;9.62607;93.17307692307692
 
 
 ----------------------------------------------------------------------

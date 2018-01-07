@@ -11,6 +11,7 @@ public class Stat {
     public static void main(String[] args) throws Exception {
 
         Display display = new Display();
+        Analyser analyser = new Analyser();
         String csv = "";
 
         Scanner scanner = new Scanner(System.in);
@@ -48,7 +49,8 @@ public class Stat {
             }
             csv += display.dataStat(algos,items,max_pack,i);
         }
-
+        csv+="\n\n";
+        analyser.generate("exemples/mySimulation", csv);
         System.out.println(csv);
     }
 
