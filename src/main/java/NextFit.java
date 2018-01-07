@@ -9,7 +9,8 @@ public class NextFit extends AlgorithmBinPacking{
     public NextFit(List<Item> items,int pack_size){
         super(items,pack_size);
     }
-    public NextFit(){
+
+    public NextFit() {
         super();
     }
 

@@ -7,7 +7,7 @@ public class WorstFit extends AlgorithmBinPacking {
         super(items, pack_size);
     }
 
-    public WorstFit(){
+    public WorstFit() {
         super();
     }
 
@@ -38,6 +38,6 @@ public class WorstFit extends AlgorithmBinPacking {
                 packs.get(worst_index).addItem(item);
             }
         }
-        time = (System.nanoTime() - debut)/1000000.0;
+        time = (System.nanoTime() - debut) / 1000000.0;
     }
 }

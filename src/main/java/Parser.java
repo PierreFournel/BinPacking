@@ -1,54 +1,38 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
-public class Parser
-{
+public class Parser {
     private int pack_size;
     private List<Item> items;
 
-    public Parser(String fileName) throws Exception
-    {
+    public Parser(String fileName) throws Exception {
+
         items = new ArrayList();
 
-    //    ClassLoader classLoader = getClass().getClassLoader();
 
-     //   File file = new File(classLoader.getResource("exemples/" + fileName).getFile());
-      //  System.out.println(file);
+        FileReader fileReader = new FileReader(System.getProperties().get("user.dir") + "/" + fileName);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-      //  FileReader fileReader = new FileReader(file);
-        System.out.println("exemples/"+ fileName);
-        InputStream inputStream = getClass().getResourceAsStream("exemples/"+ fileName);
-        System.out.println("ok");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-
-       // BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         String line;
 
-        if(bufferedReader.readLine() != null)
-        {
+        if (bufferedReader.readLine() != null) {
             line = bufferedReader.readLine();
 
-            if(line != null)
-            {
+            if (line != null) {
                 pack_size = Integer.parseInt(line);
             }
         }
 
-        if(bufferedReader.readLine() != null)
-        {
+        if (bufferedReader.readLine() != null) {
             line = bufferedReader.readLine();
 
-            if(line != null)
-            {
+            if (line != null) {
                 String items[] = line.split(", ");
 
-                for(String string : items)
-                {
-                    if(string.contains("."))
-                    {
+                for (String string : items) {
+                    if (string.contains(".")) {
                         string = string.replace(".", "");
                     }
 
@@ -58,16 +42,15 @@ public class Parser
         }
 
         bufferedReader.close();
-        inputStream.close();
+       // inputStream.close();
+        fileReader.close();
     }
 
-    public int getPack_size()
-    {
+    public int getPack_size() {
         return pack_size;
     }
 
-    public List<Item> getItems()
-    {
+    public List<Item> getItems() {
         return items;
     }
 }

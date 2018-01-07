@@ -22,7 +22,7 @@ public abstract class AlgorithmBinPacking {
         packs = new ArrayList<Pack>();
     }
 
-    public void configure(List<Item> items,int pack_size){
+    public void configure(List<Item> items, int pack_size) {
         this.items = items;
         this.pack_size = pack_size;
         packs = new ArrayList<Pack>();
@@ -30,12 +30,12 @@ public abstract class AlgorithmBinPacking {
         nb_packs_used = 1;
     }
 
-    public void refresh(){
-        items=null;
-        packs=null;
+    public void refresh() {
+        items = null;
+        packs = null;
         pack_size = 0;
-        nb_packs_used=0;
-        time=0;
+        nb_packs_used = 0;
+        time = 0;
     }
 
     public abstract void compute() throws PackException;
@@ -65,6 +65,7 @@ public abstract class AlgorithmBinPacking {
     public void setTime(double time) {
         this.time = time;
     }
+
 
 
     @Override
