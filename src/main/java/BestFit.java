@@ -39,4 +39,6 @@ public class BestFit extends AlgorithmBinPacking {
         }
         time = (System.nanoTime() - debut) / 1000000.0;
     }
+
+
 }

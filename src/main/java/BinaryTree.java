@@ -28,7 +28,7 @@ public class BinaryTree {
     }
     */
 
-    private BinaryNode getBestNode(BinaryNode binaryNode, int space){
+    private BinaryNode getBestNode(BinaryNode binaryNode, double space){
         BinaryNode best = null;
         boolean trouve =false;
         while (this.root !=null && !trouve){
@@ -71,7 +71,7 @@ public class BinaryTree {
         return a;
     }
 
-    private BinaryNode deleteNode(BinaryNode root, int cle){
+    private BinaryNode deleteNode(BinaryNode root, double cle){
         if (root == null){
             return root;
         }
@@ -118,7 +118,7 @@ public class BinaryTree {
         this.root = insert(pack, this.root);
     }
 
-    public Pack getBestPack(int space){
+    public Pack getBestPack(double space){
         BinaryNode best = getBestNode(this.root,space);
         if (best!= null){
             return best.getNodePack();
@@ -137,7 +137,7 @@ public class BinaryTree {
     public BinaryNode getRoot(){
         return this.root;
     }
-    public void deleteNode(int cle){
+    public void deleteNode(double cle){
         this.root = deleteNode(this.root, cle);
     }
 
