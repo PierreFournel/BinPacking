@@ -51,16 +51,5 @@ public class Algo {
         System.out.println(csv);
     }
 
-    public static String data(List<AlgorithmBinPacking> algos, String fileName, List<Item> items, int max_pack) {
-        String csv = fileName.split(".txt")[0] + "\n";
-        csv += "algo;items;bin capacity;packs used;time (ms)\n";
-        for (AlgorithmBinPacking algo : algos) {
-            String algoName = algo.getClass().toString().replace("class ","");
-            csv += algoName + ";" + items.size() + ";" + max_pack + ";" + algo.nb_packs_used + ";" + algo.time + "\n";
-        }
-        csv += "\n\n";
-        return csv;
-
-    }
 }
 
