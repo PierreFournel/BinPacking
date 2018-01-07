@@ -48,6 +48,7 @@ public class Stat {
             }
             csv += display.dataStat(algos,items,max_pack,i);
         }
+
         System.out.println(csv);
     }
 

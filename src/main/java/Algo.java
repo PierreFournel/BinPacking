@@ -12,6 +12,7 @@ public class Algo {
         String csv = "";
         Display display = new Display();
 
+        Analyser analyser;
         List<String> filesName = new ArrayList<String>();
 
         filesName.add("exemples/exemple100.txt");
@@ -42,16 +43,24 @@ public class Algo {
                 algo.configure(items, pack_size);
 
                 algo.compute();
-/*
-                System.out.println("Excecution de l'algorithme " + algo.getClass() + " avec l'exemple " + fileName + " : ");
-                algo.toString();
-*/
             }
+            analyser = new Analyser();
             csv += display.dataAlgo(algos, fileName, items, pack_size);
+            analyser.generate(fileName.split(".txt")[0],csv);
         }
         System.out.println(csv);
     }
 
+    public static String data(List<AlgorithmBinPacking> algos, String fileName, List<Item> items, int max_pack) {
+        String csv = fileName.split(".txt")[0] + "\n";
+        csv += "algo;items;bin capacity;packs used;time (ms)\n";
+        for (AlgorithmBinPacking algo : algos) {
+            String algoName = algo.getClass().toString().replace("class ","");
+            csv += algoName + ";" + items.size() + ";" + max_pack + ";" + algo.nb_packs_used + ";" + algo.time + "\n";
+        }
+        csv += "\n\n";
+        return csv;
 
+    }
 }
 
