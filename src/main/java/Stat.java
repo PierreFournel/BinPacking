@@ -27,7 +27,7 @@ public class Stat {
 
         int nb_simulations = scanner.nextInt();
 
-        List<Item> items = createItems(nb_items,max_pack);
+
 
         List<AlgorithmBinPacking> algos = new ArrayList<AlgorithmBinPacking>();
 
@@ -38,6 +38,8 @@ public class Stat {
         algos.add(new WorstFit());
 
         for (int i = 0; i < nb_simulations; i++) {
+
+            List<Item> items = createItems(nb_items,max_pack);
 
             for (AlgorithmBinPacking algo : algos) {
                 algo.refresh();
