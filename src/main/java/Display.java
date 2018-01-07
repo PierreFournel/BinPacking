@@ -34,15 +34,14 @@ public class Display {
 
 
     public  String dataStat(List<AlgorithmBinPacking> algos, List<Item> items, int max_pack,int index_simulation) {
-        String csv ="\n";
-         csv+="Simulation n°" +(index_simulation+1)+ " :\n\nNombre items : "+items.size()+"\nCapacite maximale d'un pack : "+max_pack+"\nTaille moyenne d'un item : "+averageItemCapacity(items)+"\n\n";
+        String csv ="";
+         csv+="Simulation no" +(index_simulation+1)+ " :\n\nNombre items : "+items.size()+"\nCapacite maximale d'un pack : "+max_pack+"\nTaille moyenne d'un item : "+averageItemCapacity(items)+"\n\n";
 
-        csv += "Algorithme, nombre de packs utilises, temps execution (ms), place moyenne occupee pack\n";
+        csv += "Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack\n";
         for (AlgorithmBinPacking algo : algos) {
             String algoName = algo.getClass().toString().replace("class ", "");
-            csv += algoName + ", " + algo.nb_packs_used  + ", " + algo.time +", "+averageUsedSpacePack(algo.packs)+"\n";
+            csv += algoName + ";" + algo.nb_packs_used  + ";" + algo.time +";"+averageUsedSpacePack(algo.packs)+"\n";
         }
-        csv += "\n\n----------------------------------------------------------------------\n\n";
         return csv;
     }
 
