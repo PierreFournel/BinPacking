@@ -1,11 +1,11 @@
 import java.util.List;
+import java.util.Queue;
 
 public class FirstFit extends AlgorithmBinPacking {
 
     public FirstFit(List<Item> items, int max_packs) {
         super(items, max_packs);
     }
-
     public FirstFit() {
         super();
     }
