@@ -7,27 +7,26 @@ public class Pack {
     private double capacity;
     private double current_size;
 
-    public  Pack(double capacity){
+    public Pack(double capacity) {
         items = new ArrayList();
         this.capacity = capacity;
         current_size = 0;
     }
 
-    public boolean canAddItem(Item item){
-        if(capacity-current_size>item.getSize())
+    public boolean canAddItem(Item item) {
+        if (capacity - current_size > item.getSize())
             return true;
         return false;
     }
 
     public void addItem(Item item) {
-            items.add(item);
-            current_size+= item.getSize();
+        items.add(item);
+        current_size += item.getSize();
     }
 
-    public double getAvailibity(){
-        return capacity-current_size;
+    public double getAvailibity() {
+        return capacity - current_size;
     }
-
 
 
     public List<Item> getItems() {

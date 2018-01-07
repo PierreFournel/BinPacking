@@ -6,7 +6,7 @@ public class AlmostWorstFit extends AlgorithmBinPacking {
         super(items, pack_size);
     }
 
-    public AlmostWorstFit(){
+    public AlmostWorstFit() {
         super();
     }
 
@@ -36,11 +36,11 @@ public class AlmostWorstFit extends AlgorithmBinPacking {
             if (!hasAlmostWorst) {
                 packs.add(new Pack(pack_size));
                 nb_packs_used++;
-                packs.get(packs.size()-1).addItem(item);
+                packs.get(packs.size() - 1).addItem(item);
             } else {
                 packs.get(almost_worst_index).addItem(item);
             }
         }
-        time = (System.nanoTime() - debut)/1000000.0;
+        time = (System.nanoTime() - debut) / 1000000.0;
     }
 }
