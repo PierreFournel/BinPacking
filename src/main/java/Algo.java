@@ -46,9 +46,9 @@ public class Algo {
             }
             analyser = new Analyser();
             csv += display.dataAlgo(algos, fileName, items, pack_size);
-            System.out.println(csv);
             analyser.generate(fileName.split(".txt")[0],csv);
         }
+        System.out.println(csv);
     }
 
     public static String data(List<AlgorithmBinPacking> algos, String fileName, List<Item> items, int max_pack) {
