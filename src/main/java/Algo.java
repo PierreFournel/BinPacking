@@ -1,7 +1,4 @@
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +7,7 @@ public class Algo {
     public static void main(String[] args) throws Exception {
 
         String csv = "";
+        String affichage ="";
         Display display = new Display();
 
         Analyser analyser;
@@ -45,10 +43,11 @@ public class Algo {
                 algo.compute();
             }
             analyser = new Analyser();
-            csv += display.dataAlgo(algos, fileName, items, pack_size);
+            affichage+=display.dataAlgo(algos, fileName, items, pack_size);
+            csv += display.dataAlgoCSV(algos, fileName, items, pack_size);
             analyser.generate(fileName.split(".txt")[0],csv);
         }
-        System.out.println(csv);
+        System.out.println(affichage);
     }
 
 }

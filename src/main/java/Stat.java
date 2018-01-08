@@ -1,6 +1,3 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,6 +10,7 @@ public class Stat {
         Display display = new Display();
         Analyser analyser = new Analyser();
         String csv = "";
+        String affichage ="";
 
         Scanner scanner = new Scanner(System.in);
 
@@ -47,11 +45,13 @@ public class Stat {
                 algo.configure(items,max_pack);
                 algo.compute();
             }
-            csv += display.dataStat(algos,items,max_pack,i);
+            csv += display.dataStatCSV(algos,items,max_pack,i);
+            affichage += display.dataStat(algos,items,max_pack,i);
         }
         csv+="\n\n";
+        affichage+="\n\n";
         analyser.generate("exemples/mySimulation", csv);
-        System.out.println(csv);
+        System.out.println(affichage);
     }
 
     public static List<Item> createItems(int nb_items, int pack_max) {

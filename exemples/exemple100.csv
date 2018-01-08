@@ -6,11 +6,11 @@ Capacite maximale d'un pack : 100
 Taille moyenne d'un item : 16.41
 
 Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack
-NextFit;21;0.109432;78.14285714285714
-FirstFit;17;0.397037;96.52941176470588
-BestFit;17;0.229136;96.52941176470588
-AlmostWorstFit;17;0.216889;96.52941176470588
-WorstFit;18;0.259555;91.16666666666667
+NextFit;21;0.122667;78.14285714285714
+FirstFit;17;0.367556;96.52941176470588
+BestFit;17;0.20089;96.52941176470588
+AlmostWorstFit;17;0.149334;96.52941176470588
+WorstFit;18;0.163556;91.16666666666667
 
 
 ----------------------------------------------------------------------

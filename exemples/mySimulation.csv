@@ -1,14 +1,14 @@
 Simulation no1 :
 
-Nombre items : 1
-Capacite maximale d'un pack : 1
-Taille moyenne d'un item : 0.6263805539083056
+Nombre items : 150
+Capacite maximale d'un pack : 100
+Taille moyenne d'un item : 50.08527608547436
 
 Algorithme;nombre de packs utilises;temps execution (ms);place moyenne occupee pack
-NextFit;1;0.016593;0.6263805539083056
-FirstFit;1;0.012642;0.6263805539083056
-BestFit;1;0.012642;0.6263805539083056
-AlmostWorstFit;1;0.011851;0.6263805539083056
-WorstFit;1;0.010667;0.6263805539083056
+NextFit;100;0.30489;75.12791412821156
+FirstFit;84;1.948892;89.43799300977567
+BestFit;83;0.967113;90.51555919061634
+AlmostWorstFit;84;0.613334;89.43799300977564
+WorstFit;88;0.817335;85.37262969114946
 
 
